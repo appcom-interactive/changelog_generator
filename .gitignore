@@ -7,3 +7,5 @@
 /pkg/
 /spec/reports/
 /tmp/
+git_changelog_generator-*
+changelog.txt
