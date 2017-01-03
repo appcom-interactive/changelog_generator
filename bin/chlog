@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+require 'gli'
+require 'git_changelog_generator'
+
+include GLI::App
+
+program_desc 'This is a CLI for creating changelogs based on git version history.'
+
+version GitChangelogGenerator::VERSION
+
+subcommand_option_handling :normal
+arguments :strict
+
+desc 'Creates changelog file based on git repository'
+arg_name 'The output filename of the changelog. Will be "changelog.txt" if omitted'
+command :create do |c|
+  c.action do |global_options, options, args|
+    output = args[0].nil? ? 'changelog.txt' : args[0]
+    GitChangelogGenerator::generate_changelog output
+  end
+end
+
+on_error do |exception|
+  # Error logic here
+  # return false to skip default error handling
+  true
+end
+
+exit run(ARGV)
