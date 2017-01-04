@@ -1,8 +1,7 @@
 # GitChangelogGenerator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/git_changelog_generator`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem creates a changelog file based on your git version history. The output is categorized by tags. Even if no tags
+are available in the repository the gem will still work using the HEAD as virtual tag.
 
 ## Installation
 
@@ -22,7 +21,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Just run the following command in a directory maintained by git
+
+```
+chlog create [filename]
+```
+
+where filename is the filename of the created file. If no argument is specified the file will be created under `changelog.txt`.
 
 ## Development
 
@@ -37,5 +42,5 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
 
