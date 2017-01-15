@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{This is a gem for creating changelogs from git version history.}
   spec.description   = %q{This is a gem for creating changelogs from git version history.}
-  spec.homepage      = "http://github.com"
+  spec.homepage      = "https://github.com/appcom-interactive/changelog_generator"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
