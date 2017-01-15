@@ -1,5 +1,7 @@
 # GitChangelogGenerator
 
+[![Gem Version](https://badge.fury.io/rb/git_changelog_generator.svg)](https://badge.fury.io/rb/git_changelog_generator)
+
 This gem creates a changelog file based on your git version history. The output is categorized by tags. Even if no tags
 are available in the repository the gem will still work using the HEAD as virtual tag.
 
